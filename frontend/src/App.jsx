@@ -13,15 +13,14 @@ function App() {
 
       {/* SIDEBAR */}
       <div className="sidebar">
-        <h2>⚡ ATS</h2>
+        <h2>ATS Panel</h2>
 
-        <button onClick={() => setPage("home")}>🏠 Home</button>
-        <button onClick={() => setPage("candidates")}>👤 Candidates</button>
+        <button onClick={() => setPage("home")}>Home</button>
+        <button onClick={() => setPage("candidates")}>Candidates</button>
       </div>
 
       {/* MAIN */}
       <div className="main">
-
         {page === "home" && <Dashboard />}
 
         {page === "candidates" && (
@@ -30,8 +29,8 @@ function App() {
             <CandidateDetails selected={selected} />
           </div>
         )}
-
       </div>
+
     </div>
   );
 }

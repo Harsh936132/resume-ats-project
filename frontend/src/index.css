@@ -1,125 +1,16 @@
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: #f4f6fb;
-}
-
-/* TITLE */
-.title {
-  text-align: center;
-  padding: 20px;
-}
-
-/* LAYOUT */
-.layout {
-  display: flex;
-  gap: 20px;
-  padding: 20px;
-}
-
-/* LEFT PANEL */
-.upload-box {
-  width: 30%;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-/* RIGHT PANEL */
-.list-box {
-  width: 70%;
-}
-
-/* INPUTS */
-input, textarea {
-  width: 100%;
-  margin: 8px 0;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-}
-
-/* BUTTON */
-button {
-  width: 100%;
-  padding: 10px;
-  background: #6366f1;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* CARD */
-.candidate-card-mnc {
-  background: white;
-  padding: 15px;
-  margin-top: 15px;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
-}
-
-/* SCORE */
-.score-section {
-  display: flex;
-  gap: 15px;
-}
-
-.circle {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background: #22c55e;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-}
-
-/* PROGRESS */
-.bar {
-  margin-bottom: 5px;
-}
-
-.progress {
-  background: #ddd;
-  height: 6px;
-  border-radius: 5px;
-}
-
-.progress div {
-  background: #6366f1;
+/* FORCE DARK THEME */
+html, body, #root {
   height: 100%;
-  border-radius: 5px;
+  margin: 0;
+  background: #020617;
+  color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* SKILLS */
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
+/* SCROLL */
+::-webkit-scrollbar {
+  width: 6px;
 }
-
-.chip {
-  padding: 5px 10px;
-  border-radius: 10px;
-  font-size: 12px;
-}
-
-.green {
-  background: #d1fae5;
-  color: #065f46;
-}
-
-.red {
-  background: #fee2e2;
-  color: #7f1d1d;
-}
-
-/* STATUS */
-.status-tag {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #6366f1;
+::-webkit-scrollbar-thumb {
+  background: #7c3aed;
 }

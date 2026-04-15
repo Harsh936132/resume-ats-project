@@ -2,41 +2,96 @@ import { useState } from "react";
 
 function Chatbot() {
   const [messages, setMessages] = useState([
-    { text: "AI Ready 🚀", sender: "bot" }
+    { text: "Hi 👋 Ask me about resume tips!", sender: "bot" }
   ]);
   const [input, setInput] = useState("");
 
-  const getReply = (msg) => {
-    if (msg.includes("skills")) return "Add Java, React, SQL.";
-    if (msg.includes("improve")) return "Use strong action verbs.";
-    return "Try asking about skills or improvement.";
-  };
-
-  const sendMessage = () => {
+  const send = () => {
     if (!input) return;
 
-    const user = { text: input, sender: "user" };
-    const bot = { text: getReply(input), sender: "bot" };
+    const userMsg = { text: input, sender: "user" };
 
-    setMessages([...messages, user, bot]);
+    // Simple dummy AI response
+    const botMsg = {
+      text: "💡 Tip: Add quantified achievements and strong action verbs.",
+      sender: "bot"
+    };
+
+    setMessages([...messages, userMsg, botMsg]);
     setInput("");
   };
 
   return (
-    <div className="chatbox">
+    <div style={{ display: "flex", flexDirection: "column", height: "350px" }}>
 
-      <h3>AI Assistant</h3>
-
-      <div className="chat-messages">
-        {messages.map((m, i) => (
-          <div key={i} className={m.sender === "user" ? "user-msg" : "bot-msg"}>
-            {m.text}
+      {/* CHAT AREA */}
+      <div
+        style={{
+          flex: 1,
+          overflowY: "auto",
+          padding: "10px",
+          borderRadius: "10px",
+          background: "#020617"
+        }}
+      >
+        {messages.map((msg, i) => (
+          <div
+            key={i}
+            style={{
+              textAlign: msg.sender === "user" ? "right" : "left",
+              marginBottom: "10px"
+            }}
+          >
+            <span
+              style={{
+                display: "inline-block",
+                padding: "10px",
+                borderRadius: "12px",
+                background:
+                  msg.sender === "user"
+                    ? "linear-gradient(90deg,#7c3aed,#22d3ee)"
+                    : "#1e293b",
+                color: "white",
+                maxWidth: "70%"
+              }}
+            >
+              {msg.text}
+            </span>
           </div>
         ))}
       </div>
 
-      <input value={input} onChange={(e) => setInput(e.target.value)} />
-      <button onClick={sendMessage}>Run</button>
+      {/* INPUT AREA */}
+      <div style={{ display: "flex", marginTop: "10px" }}>
+        <input
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="Ask something..."
+          style={{
+            flex: 1,
+            padding: "10px",
+            borderRadius: "10px",
+            border: "1px solid #334155",
+            background: "#020617",
+            color: "white"
+          }}
+        />
+
+        <button
+          onClick={send}
+          style={{
+            marginLeft: "10px",
+            padding: "10px 15px",
+            borderRadius: "10px",
+            background: "linear-gradient(90deg,#7c3aed,#22d3ee)",
+            border: "none",
+            color: "white",
+            cursor: "pointer"
+          }}
+        >
+          Send
+        </button>
+      </div>
 
     </div>
   );

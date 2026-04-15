@@ -20,24 +20,39 @@ function Dashboard() {
   };
 
   return (
-    <div className="layout">
+    <div>
 
-      {/* LEFT FORM */}
-      <div className="card">
-        <h3>Add Candidate</h3>
+      <h2 style={{
+        background: "linear-gradient(90deg,#7c3aed,#22d3ee)",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent"
+      }}>
+        ATS Resume Screener
+      </h2>
 
-        <input id="name" placeholder="Name" />
-        <input id="email" placeholder="Email" />
-        <input id="phone" placeholder="Phone" />
-        <textarea id="jd" placeholder="Job Description"></textarea>
-        <input type="file" id="file" />
+      <div className="layout">
 
-        <button onClick={upload}>Run</button>
-      </div>
+        <div className="card">
+          <h3>Add Candidate</h3>
 
-      {/* RIGHT CHAT */}
-      <div className="card">
-        <Chatbot />
+          <input id="name" placeholder="Name" />
+          <input id="email" placeholder="Email" />
+          <input id="phone" placeholder="Phone" />
+          <textarea id="jd" placeholder="Job Description"></textarea>
+          <input type="file" id="file" />
+
+          <button onClick={upload}>Upload & Analyze</button>
+
+          <p style={{ fontSize: "12px", opacity: 0.7 }}>
+            Upload PDF resumes only (Max 5MB)
+          </p>
+        </div>
+
+        <div className="card">
+          <h3>AI Assistant</h3>
+          <Chatbot />
+        </div>
+
       </div>
 
     </div>
