@@ -47,6 +47,9 @@ This project is an AI-based Resume Screening System (ATS) that helps analyze res
 Total Score = 100
 
 ---
+### Screenshots
+
+<img width="1422" height="1703" alt="dashboard" src="https://github.com/user-attachments/...">
 
 ## 🚀 How to Run
 
