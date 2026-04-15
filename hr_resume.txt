@@ -1,0 +1,12 @@
+John Doe
+john@example.com
+555-555-5555
+
+Education
+B.S. in Computer Science
+
+Experience
+5 years of software development.
+
+Skills
+Java, React, SQL, Spring Boot

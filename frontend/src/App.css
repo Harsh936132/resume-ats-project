@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: monospace;
+  background: #0d1117;
+  color: #c9d1d9;
+}
+
+.app {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background: #161b22;
+  padding: 20px;
+}
+
+.sidebar button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background: none;
+  border: 1px solid #30363d;
+  color: white;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.card {
+  background: #161b22;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+}
+
+.candidate {
+  padding: 10px;
+  border-bottom: 1px solid #30363d;
+  cursor: pointer;
+}
+
+.candidate:hover {
+  background: #21262d;
+}
+
+.score-box {
+  color: #58a6ff;
+  font-size: 24px;
+}
+
+.bar {
+  height: 6px;
+  background: #30363d;
+}
+
+.fill {
+  height: 100%;
+  background: #58a6ff;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.info-card {
+  background: #0d1117;
+  padding: 10px;
+  border: 1px solid #30363d;
+}
+
+.resume-clean {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.chatbox {
+  height: 300px;
+}
+
+.user-msg {
+  text-align: right;
+  color: #58a6ff;
+}
+
+.bot-msg {
+  color: white;
+}
